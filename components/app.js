@@ -23,8 +23,8 @@ class App {
 }
 
 class App1 {
-  constructor(_cryptoHeader){
-    this.cryptoHeader = _cryptoHeader;
+  constructor(_fearIndex){
+    this.fearIndex = _fearIndex;
     this.handleFearIndexSuccess = this.handleFearIndexSuccess.bind(this);
     this.handleFearIndexError = this.handleFearIndexError.bind(this);
   }
@@ -38,6 +38,7 @@ class App1 {
   }
   handleFearIndexSuccess(data1){
     console.log(data1)
+    this.fearIndex.updateHeader(data1)
   }
   handleFearIndexError(error1){
     console.error(error1)

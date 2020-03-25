@@ -36,5 +36,15 @@ class CryptoTable {
     }
 
   }
+}
 
+class FearIndex {
+  constructor(_headerElement) {
+    this.headerElement = _headerElement;
+  }
+  updateHeader(data1){
+    var divFear = this.headerElement.querySelector('.fear')
+    divFear.textContent = data1.data[0].value
+    console.log(data1.data[0].value)
+  }
 }
