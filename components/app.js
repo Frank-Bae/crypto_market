@@ -8,8 +8,7 @@ class App {
   getCrypto(){
     $.ajax({
       method: "GET",
-      url: "https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=100&tsym=USD&api_key=32bcf25de42cdc2dfce6176731239556beb85906a5566e11ed8eb43e9b827aca ",
-      // header: { "authirization": "32bcf25de42cdc2dfce6176731239556beb85906a5566e11ed8eb43e9b827aca"},
+      url: "https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=100&tsym=USD&api_key=32bcf25de42cdc2dfce6176731239556beb85906a5566e11ed8eb43e9b827aca",
       success: this.handleGetCryptoSuccess,
       error: this.handleGetCryptoError
     })
@@ -20,5 +19,27 @@ class App {
   }
   handleGetCryptoError(error){
     console.error(error)
+  }
+}
+
+class App1 {
+  constructor(_cryptoHeader){
+    this.cryptoHeader = _cryptoHeader;
+    this.handleFearIndexSuccess = this.handleFearIndexSuccess.bind(this);
+    this.handleFearIndexError = this.handleFearIndexError.bind(this);
+  }
+  getFearIndex(){
+    $.ajax({
+      method: "GET",
+      url: "https://cors-anywhere.herokuapp.com/https://api.alternative.me/fng/",
+      success: this.handleFearIndexSuccess,
+      error: this.handleFearIndexError
+    })
+  }
+  handleFearIndexSuccess(data1){
+    console.log(data1)
+  }
+  handleFearIndexError(error1){
+    console.error(error1)
   }
 }
