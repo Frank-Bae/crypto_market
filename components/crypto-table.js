@@ -52,3 +52,15 @@ class FearIndex {
     console.log(data1.data[0].value_classification)
   }
 }
+
+class FearIndexHistory {
+  constructor(_headerElement1) {
+    this.headerElement1 = _headerElement1;
+  }
+  updateHeader1(data2){
+    console.log(data2)
+  }
+}
+// var timestamp = Number(new Date(1585108800 * 1000))
+// var date = new Date(timestamp)
+// console.log(date)

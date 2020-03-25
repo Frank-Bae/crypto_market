@@ -22,10 +22,11 @@ class App {
 }
 
 class App1 {
-  constructor(_fearIndex){
+  constructor(_fearIndex, _fearIndexHistory){
     this.fearIndex = _fearIndex;
     this.handleFearIndexSuccess = this.handleFearIndexSuccess.bind(this);
     this.handleFearIndexError = this.handleFearIndexError.bind(this);
+    this.fearIndexHistory = _fearIndexHistory;
     this.handleFearIndexHistorySuccess = this.handleFearIndexHistorySuccess.bind(this);
     this.handleFearIndexHistoryError = this.handleFearIndexHistoryError.bind(this)
   }
@@ -46,16 +47,13 @@ class App1 {
   getFearIndexHistory(){
     $.ajax({
       method: "GET",
-      url: "https://cors-anywhere.herokuapp.com/https://api.alternative.me/fng/?limit=10",
+      url: "https://cors-anywhere.herokuapp.com/https://api.alternative.me/fng/?limit=31",
       success: this.handleFearIndexHistorySuccess,
       error: this.handleFearIndexhistoryError
     })
   }
   handleFearIndexHistorySuccess(data2){
-
-    var timestamp = Number(new Date(1585108800 *1000))
-    var date = new Date(timestamp)
-    console.log(date)
+    this.fearIndexHistory.updateHeader1(data2)
     console.log(data2)
   }
   handleFearIndexHistoryError(error2){
