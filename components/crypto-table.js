@@ -43,8 +43,12 @@ class FearIndex {
     this.headerElement = _headerElement;
   }
   updateHeader(data1){
-    var divFear = this.headerElement.querySelector('.fear')
-    divFear.textContent = data1.data[0].value
+    var pValue = this.headerElement.querySelector('.value')
+    pValue.textContent = "Crypto Fear/Greed Index: " + data1.data[0].value
     console.log(data1.data[0].value)
+
+    var pSentiment = this.headerElement.querySelector('.sentiment')
+    pSentiment.textContent = "Sentiment: " + data1.data[0].value_classification
+    console.log(data1.data[0].value_classification)
   }
 }
