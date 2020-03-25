@@ -8,3 +8,4 @@ var app = new App(cryptoTable);
 app.getCrypto()
 var app1 = new App1(fearIndex);
 app1.getFearIndex()
+app1.getFearIndexHistory()

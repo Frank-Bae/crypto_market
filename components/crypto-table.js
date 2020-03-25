@@ -11,7 +11,7 @@ class CryptoTable {
       var tdRank = document.createElement('td')
       tdRank.textContent = i+1
       var tdName = document.createElement('td')
-      tdName.textContent = data.Data[i].CoinInfo.Name
+      tdName.textContent = data.Data[i].CoinInfo.FullName
 
       // var image = document.createElement('IMG')
       // image.setAttribute("src", "https://www.cryptocompare.com/"+data.Data[i].CoinInfo.ImageUrl)
