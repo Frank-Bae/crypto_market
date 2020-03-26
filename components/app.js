@@ -15,7 +15,6 @@ class AppTable {
   }
   handleGetCryptoSuccess(data){
     this.cryptoTable.updateTable(data)
-    console.log(data)
   }
   handleGetCryptoError(error){
     console.error(error)

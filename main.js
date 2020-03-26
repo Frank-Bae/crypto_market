@@ -13,7 +13,7 @@ appTable.getCrypto()
 
 var button = document.querySelector('.btn')
 button.addEventListener('click', function(){
-  var tbody = table.querySelector('tbody')
+  var tbody = document.querySelector('tbody')
   tbody.innerHTML = ""
   var refresh = new AppTable(cryptoTable)
   refresh.getCrypto()
