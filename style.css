@@ -2,7 +2,7 @@
   margin-top: 30px;
 }
 body {
-  background-color: rgb(24, 74, 92)
+  background-color: rgb(24, 74, 92);
 }
 img {
   width: 35px;
@@ -16,17 +16,26 @@ h1 {
   color: steelblue;
 }
 h3 {
-  color: rgb(182, 128, 35)
+  color: rgb(182, 128, 35);
 }
 .fear p {
   font-size: 1.3em;
-  color: rgb(181, 181, 189)
+  color: rgb(181, 181, 189);
 }
 .fear-value {
   color: white;
 }
 .fear-sentiment {
-  color: white
+  color: white;
+}
+.red {
+  color: red;
+}
+.yellow {
+  color: yellow;
+}
+.green {
+  color: green;
 }
 .fear-history p {
   font-size: 1.3em;

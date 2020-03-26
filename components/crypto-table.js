@@ -52,7 +52,13 @@ class FearIndex {
   updateHeader(data1){
     var pValue = this.headerElement.querySelector('.value')
     var spanValue = document.createElement('span')
-    spanValue.classList.add("fear-value")
+    if (data1.data[0].value <= 35) {
+      spanValue.className = "red"
+    } else if (data1.data[0].value <= 65) {
+      spanValue.className = "yellow"
+    } else {
+      spanValue.className = "green"
+    }
     spanValue.textContent = " (" + data1.data[0].value + ")"
     pValue.appendChild(spanValue)
 
