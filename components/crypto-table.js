@@ -56,7 +56,7 @@ class FearIndex {
       spanValue.className = "red"
     } else if (data1.data[0].value <= 65) {
       spanValue.className = "yellow"
-    } else {
+    } else if (data1.data[0].value >= 65){
       spanValue.className = "green"
     }
     spanValue.textContent = " (" + data1.data[0].value + ")"
@@ -64,11 +64,15 @@ class FearIndex {
 
     var pSentiment = this.headerElement.querySelector('.sentiment')
     var spanSentiment = document.createElement('span')
-    spanSentiment.classList.add("fear-sentiment")
+    if (data1.data[0].value <= 35) {
+      spanSentiment.className = "red"
+    } else if (data1.data[0].value <= 65) {
+      spanSentiment.className = "yellow"
+    } else if (data1.data[0].value >= 65){
+      spanSentiment.className = "green"
+    }
     spanSentiment.textContent = " " + data1.data[0].value_classification
     pSentiment.appendChild(spanSentiment)
-
-
   }
 }
 

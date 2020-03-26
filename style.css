@@ -20,7 +20,7 @@ h3 {
 }
 .fear p {
   font-size: 1.3em;
-  color: rgb(181, 181, 189);
+  color: rgb(255, 255, 255);
 }
 .fear-value {
   color: white;
@@ -29,13 +29,13 @@ h3 {
   color: white;
 }
 .red {
-  color: red;
+  color: rgb(210, 24, 24);
 }
 .yellow {
-  color: yellow;
+  color: rgb(210, 210, 21);
 }
 .green {
-  color: green;
+  color: rgb(29, 191, 29);
 }
 .fear-history p {
   font-size: 1.3em;
