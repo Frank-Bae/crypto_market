@@ -4,7 +4,7 @@ class CryptoTable {
   }
   updateTable(data){
     var tbody = this.tableElement.querySelector('tbody')
-    tbody.innerHTML = ""
+    // tbody.innerHTML = ""
     for(var i = 0; i < data.Data.length; i++){
       var tr = document.createElement('tr')
 
