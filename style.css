@@ -1,9 +1,12 @@
+.container {
+  margin-top: 30px;
+}
 body {
   background-color: rgb(24, 74, 92)
 }
 img {
   width: 35px;
-  border-radius: 50%;
+  border-radius: 25%;
   margin-right: 10px;
 }
 p {
@@ -27,4 +30,13 @@ h3 {
 }
 .fear-history p {
   font-size: 1.3em;
+}
+.symbol {
+  width: 18%;
+}
+.top-tier-vol {
+  color: rgb(167, 167, 37);
+}
+.btn-success {
+  padding: 2% 30%;
 }
