@@ -44,7 +44,7 @@ class FearIndex {
   }
   updateHeader(data1){
     var pValue = this.headerElement.querySelector('.value')
-    pValue.textContent = "Crypto Fear/Greed Index: " + data1.data[0].value
+    pValue.textContent = "Crypto Fear/Greed Index: (" + data1.data[0].value +")"
     console.log(data1.data[0].value)
 
     var pSentiment = this.headerElement.querySelector('.sentiment')
@@ -58,9 +58,22 @@ class FearIndexHistory {
     this.headerElement1 = _headerElement1;
   }
   updateHeader1(data2){
-    console.log(data2)
+    // var pYesterday = this.headerElement1.getElementById('yesterday')
+    // pYesterday.textContent = data2.data[1].value + " " + data2.data[1].value_classification
+    var pYesterday = this.headerElement1.querySelector('.yesterday')
+    pYesterday.textContent = "Yesterday: (" + data2.data[1].value + ") " + data2.data[1].value_classification
+    var pLastWeek = this.headerElement1.querySelector('.last-week')
+    pLastWeek.textContent = "Last Week (" + data2.data[6].value + ") " + data2.data[6].value_classification
+    var pLastMonth = this.headerElement1.querySelector('.last-month')
+    pLastMonth.textContent = "Last Month (" + data2.data[30].value + ") " + data2.data[30].value_classification
+    console.log(pYesterday)
+    console.log(data2.data[1].value)
+    console.log(data2.data[1].value_classification)
+
   }
 }
-// var timestamp = Number(new Date(1585108800 * 1000))
+
+// var timeStampYesterday = data2.data[1].timestamp
+// var timestamp = Number(new Date(timeStampYesterday * 1000))
 // var date = new Date(timestamp)
 // console.log(date)

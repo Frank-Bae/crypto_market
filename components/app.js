@@ -54,7 +54,6 @@ class App1 {
   }
   handleFearIndexHistorySuccess(data2){
     this.fearIndexHistory.updateHeader1(data2)
-    console.log(data2)
   }
   handleFearIndexHistoryError(error2){
     console.error(error2)
