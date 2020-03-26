@@ -82,12 +82,41 @@ class FearIndexHistory {
   }
   updateHeader1(data2){
     var pYesterday = this.headerElement1.querySelector('.yesterday')
-    pYesterday.textContent = "Yesterday: (" + data2.data[1].value + ") " + data2.data[1].value_classification
-    var pLastWeek = this.headerElement1.querySelector('.last-week')
-    pLastWeek.textContent = "Last Week (" + data2.data[6].value + ") " + data2.data[6].value_classification
-    var pLastMonth = this.headerElement1.querySelector('.last-month')
-    pLastMonth.textContent = "Last Month (" + data2.data[30].value + ") " + data2.data[30].value_classification
+    var spanYesterday = document.createElement('span')
+    if (data2.data[1].value <= 35) {
+      spanYesterday.className = "red"
+    } else if (data2.data[1].value <= 65) {
+      spanYesterday.className = "yellow"
+    } else if (data2.data[1].value >= 65) {
+      spanYesterday.className = "green"
+    }
+    spanYesterday.textContent = " (" + data2.data[1].value + ") " + data2.data[1].value_classification
+    pYesterday.appendChild(spanYesterday)
 
+    var pLastWeek = this.headerElement1.querySelector('.last-week')
+    var spanLastWeek = document.createElement('span')
+    if (data2.data[6].value <= 35) {
+      spanLastWeek.className = "red"
+    } else if (data2.data[6].value <= 65) {
+      spanLastWeek.className = "yellow"
+    } else if (data2.data[6].value >= 65) {
+      spanLastWeek.className = "green"
+    }
+    spanLastWeek.textContent = " (" + data2.data[6].value + ") " + data2.data[6].value_classification
+    pLastWeek.appendChild(spanLastWeek)
+
+
+    var pLastMonth = this.headerElement1.querySelector('.last-month')
+    var spanLastMonth = document.createElement('span')
+    if (data2.data[30].value <= 35) {
+      spanLastMonth.className = "red"
+    } else if (data2.data[30].value <= 65) {
+      spanLastMonth.className = "yellow"
+    } else if (data2.data[30].value >= 65) {
+      spanLastMonth.className = "green"
+    }
+    spanLastMonth.textContent = " (" + data2.data[30].value + ") " + data2.data[30].value_classification
+    pLastMonth.appendChild(spanLastMonth)
   }
 }
 
