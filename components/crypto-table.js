@@ -11,7 +11,7 @@ class CryptoTable {
       var tdRank = document.createElement('td')
       tdRank.textContent = i+1
       var tdName = document.createElement('td')
-      tdName.textContent = data.Data[i].CoinInfo.Name
+      tdName.textContent = data.Data[i].CoinInfo.FullName
 
       // var image = document.createElement('IMG')
       // image.setAttribute("src", "https://www.cryptocompare.com/"+data.Data[i].CoinInfo.ImageUrl)
@@ -44,7 +44,7 @@ class FearIndex {
   }
   updateHeader(data1){
     var pValue = this.headerElement.querySelector('.value')
-    pValue.textContent = "Crypto Fear/Greed Index: " + data1.data[0].value
+    pValue.textContent = "Crypto Fear/Greed Index: (" + data1.data[0].value +")"
     console.log(data1.data[0].value)
 
     var pSentiment = this.headerElement.querySelector('.sentiment')
@@ -52,3 +52,28 @@ class FearIndex {
     console.log(data1.data[0].value_classification)
   }
 }
+
+class FearIndexHistory {
+  constructor(_headerElement1) {
+    this.headerElement1 = _headerElement1;
+  }
+  updateHeader1(data2){
+    // var pYesterday = this.headerElement1.getElementById('yesterday')
+    // pYesterday.textContent = data2.data[1].value + " " + data2.data[1].value_classification
+    var pYesterday = this.headerElement1.querySelector('.yesterday')
+    pYesterday.textContent = "Yesterday: (" + data2.data[1].value + ") " + data2.data[1].value_classification
+    var pLastWeek = this.headerElement1.querySelector('.last-week')
+    pLastWeek.textContent = "Last Week (" + data2.data[6].value + ") " + data2.data[6].value_classification
+    var pLastMonth = this.headerElement1.querySelector('.last-month')
+    pLastMonth.textContent = "Last Month (" + data2.data[30].value + ") " + data2.data[30].value_classification
+    console.log(pYesterday)
+    console.log(data2.data[1].value)
+    console.log(data2.data[1].value_classification)
+
+  }
+}
+
+// var timeStampYesterday = data2.data[1].timestamp
+// var timestamp = Number(new Date(timeStampYesterday * 1000))
+// var date = new Date(timestamp)
+// console.log(date)
