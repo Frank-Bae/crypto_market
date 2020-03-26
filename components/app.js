@@ -1,5 +1,5 @@
 
-class App {
+class AppTable {
   constructor(cryptoTable){
     this.cryptoTable = cryptoTable;
     this.handleGetCryptoSuccess = this.handleGetCryptoSuccess.bind(this);
@@ -15,13 +15,14 @@ class App {
   }
   handleGetCryptoSuccess(data){
     this.cryptoTable.updateTable(data)
+    console.log(data)
   }
   handleGetCryptoError(error){
     console.error(error)
   }
 }
 
-class App1 {
+class AppHeader {
   constructor(_fearIndex, _fearIndexHistory){
     this.fearIndex = _fearIndex;
     this.handleFearIndexSuccess = this.handleFearIndexSuccess.bind(this);

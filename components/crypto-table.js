@@ -7,29 +7,33 @@ class CryptoTable {
     for(var i = 0; i < data.Data.length; i++){
       var tr = document.createElement('tr')
 
-
       var tdRank = document.createElement('td')
       tdRank.textContent = i+1
-      var tdName = document.createElement('td')
-      tdName.textContent = data.Data[i].CoinInfo.FullName
 
-      // var image = document.createElement('IMG')
-      // image.setAttribute("src", "https://www.cryptocompare.com/"+data.Data[i].CoinInfo.ImageUrl)
-      // tdName.appendChild(image)
+      var tdSymbol = document.createElement('td')
+      var symbol = document.createElement('img')
+      symbol.setAttribute("src", "https://www.cryptocompare.com/" + data.Data[i].CoinInfo.ImageUrl)
+      tdSymbol.appendChild(symbol)
+      var name = document.createElement('span')
+      name.textContent = data.Data[i].CoinInfo.FullName
+      tdSymbol.appendChild(name)
 
       var tdPrice = document.createElement('td')
       tdPrice.textContent = data.Data[i].DISPLAY.USD.PRICE
       var tdMarketCap = document.createElement('td')
       tdMarketCap.textContent = data.Data[i].DISPLAY.USD.MKTCAP
-      var topTierVol = document.createElement('td')
-      topTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
+      var tdTopTierVol = document.createElement('td')
+      tdTopTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
+      var tdChange24 = document.createElement('td')
+      tdChange24.textContent = data.Data[i].DISPLAY.USD.CHANGE24HOUR
 
 
       tr.appendChild(tdRank)
-      tr.appendChild(tdName)
+      tr.appendChild(tdSymbol)
       tr.appendChild(tdPrice)
       tr.appendChild(tdMarketCap)
-      tr.appendChild(topTierVol)
+      tr.appendChild(tdTopTierVol)
+      tr.appendChild(tdChange24)
 
 
       tbody.appendChild(tr)
@@ -44,12 +48,18 @@ class FearIndex {
   }
   updateHeader(data1){
     var pValue = this.headerElement.querySelector('.value')
-    pValue.textContent = "Crypto Fear/Greed Index: (" + data1.data[0].value +")"
-    console.log(data1.data[0].value)
+    var spanValue = document.createElement('span')
+    spanValue.classList.add("fear-value")
+    spanValue.textContent = " (" + data1.data[0].value + ")"
+    pValue.appendChild(spanValue)
 
     var pSentiment = this.headerElement.querySelector('.sentiment')
-    pSentiment.textContent = "Sentiment: " + data1.data[0].value_classification
-    console.log(data1.data[0].value_classification)
+    var spanSentiment = document.createElement('span')
+    spanSentiment.classList.add("fear-sentiment")
+    spanSentiment.textContent = " " + data1.data[0].value_classification
+    pSentiment.appendChild(spanSentiment)
+
+
   }
 }
 
@@ -58,17 +68,12 @@ class FearIndexHistory {
     this.headerElement1 = _headerElement1;
   }
   updateHeader1(data2){
-    // var pYesterday = this.headerElement1.getElementById('yesterday')
-    // pYesterday.textContent = data2.data[1].value + " " + data2.data[1].value_classification
     var pYesterday = this.headerElement1.querySelector('.yesterday')
     pYesterday.textContent = "Yesterday: (" + data2.data[1].value + ") " + data2.data[1].value_classification
     var pLastWeek = this.headerElement1.querySelector('.last-week')
     pLastWeek.textContent = "Last Week (" + data2.data[6].value + ") " + data2.data[6].value_classification
     var pLastMonth = this.headerElement1.querySelector('.last-month')
     pLastMonth.textContent = "Last Month (" + data2.data[30].value + ") " + data2.data[30].value_classification
-    console.log(pYesterday)
-    console.log(data2.data[1].value)
-    console.log(data2.data[1].value_classification)
 
   }
 }
