@@ -3,14 +3,10 @@
 }
 body {
   background-color: rgb(24, 74, 92);
-}
-img {
-  width: 35px;
-  border-radius: 25%;
-  margin-right: 10px;
+  font-family: ;
 }
 p {
-  color: white;
+   color: rgb(225, 213, 213);
 }
 h1 {
   color: steelblue;
@@ -18,15 +14,14 @@ h1 {
 h3 {
   color: rgb(182, 128, 35);
 }
+
+/* styling for any header */
+.index-info {
+  font-size: 1.2em;
+}
 .fear p {
   font-size: 1.3em;
   color: rgb(225, 213, 213);
-}
-.fear-value {
-  color: white;
-}
-.fear-sentiment {
-  color: white;
 }
 .red {
   color: rgb(255, 42, 42);
@@ -40,12 +35,19 @@ h3 {
 .fear-history p {
   font-size: 1.3em;
 }
+.btn-success {
+  padding: 2% 30%;
+}
+
+/* Styling for any table */
 .symbol {
   width: 18%;
 }
 .top-tier-vol {
   color: rgb(167, 167, 37);
 }
-.btn-success {
-  padding: 2% 30%;
+img {
+  width: 35px;
+  border-radius: 25%;
+  margin-right: 10px;
 }
