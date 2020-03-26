@@ -7,7 +7,6 @@ class CryptoTable {
     for(var i = 0; i < data.Data.length; i++){
       var tr = document.createElement('tr')
 
-
       var tdRank = document.createElement('td')
       tdRank.textContent = i+1
 
@@ -15,34 +14,26 @@ class CryptoTable {
       var symbol = document.createElement('img')
       symbol.setAttribute("src", "https://www.cryptocompare.com/" + data.Data[i].CoinInfo.ImageUrl)
       tdSymbol.appendChild(symbol)
-      console.log(symbol)
-
       var name = document.createElement('span')
       name.textContent = data.Data[i].CoinInfo.FullName
       tdSymbol.appendChild(name)
-
-      // var tdName = document.createElement('td')
-      // tdName.textContent = data.Data[i].CoinInfo.FullName
-
-      // tdName.appendChild(symbol)
-
-
-
-
 
       var tdPrice = document.createElement('td')
       tdPrice.textContent = data.Data[i].DISPLAY.USD.PRICE
       var tdMarketCap = document.createElement('td')
       tdMarketCap.textContent = data.Data[i].DISPLAY.USD.MKTCAP
-      var topTierVol = document.createElement('td')
-      topTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
+      var tdTopTierVol = document.createElement('td')
+      tdTopTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
+      var tdChange24 = document.createElement('td')
+      tdChange24.textContent = data.Data[i].DISPLAY.USD.CHANGE24HOUR
 
 
       tr.appendChild(tdRank)
       tr.appendChild(tdSymbol)
       tr.appendChild(tdPrice)
       tr.appendChild(tdMarketCap)
-      tr.appendChild(topTierVol)
+      tr.appendChild(tdTopTierVol)
+      tr.appendChild(tdChange24)
 
 
       tbody.appendChild(tr)
@@ -57,10 +48,17 @@ class FearIndex {
   }
   updateHeader(data1){
     var pValue = this.headerElement.querySelector('.value')
-    pValue.textContent = "Crypto Fear/Greed Index: (" + data1.data[0].value +")"
+    var spanValue = document.createElement('span')
+    spanValue.classList.add("fear-value")
+    spanValue.textContent = " (" + data1.data[0].value + ")"
+    pValue.appendChild(spanValue)
 
     var pSentiment = this.headerElement.querySelector('.sentiment')
-    pSentiment.textContent = "Sentiment: " + data1.data[0].value_classification
+    var spanSentiment = document.createElement('span')
+    spanSentiment.classList.add("fear-sentiment")
+    spanSentiment.textContent = " " + data1.data[0].value_classification
+    pSentiment.appendChild(spanSentiment)
+
 
   }
 }
