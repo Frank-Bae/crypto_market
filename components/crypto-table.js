@@ -4,6 +4,7 @@ class CryptoTable {
   }
   updateTable(data){
     var tbody = this.tableElement.querySelector('tbody')
+    tbody.innerHTML = ""
     for(var i = 0; i < data.Data.length; i++){
       var tr = document.createElement('tr')
 
@@ -11,6 +12,7 @@ class CryptoTable {
       tdRank.textContent = i+1
 
       var tdSymbol = document.createElement('td')
+      tdSymbol.classList.add('symbol')
       var symbol = document.createElement('img')
       symbol.setAttribute("src", "https://www.cryptocompare.com/" + data.Data[i].CoinInfo.ImageUrl)
       tdSymbol.appendChild(symbol)
@@ -26,7 +28,8 @@ class CryptoTable {
       tdTopTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
       var tdChange24 = document.createElement('td')
       tdChange24.textContent = data.Data[i].DISPLAY.USD.CHANGE24HOUR
-
+      var tdChange24Percentage = document.createElement('td')
+      tdChange24Percentage.textContent = data.Data[i].DISPLAY.USD.CHANGEPCT24HOUR + "%"
 
       tr.appendChild(tdRank)
       tr.appendChild(tdSymbol)
@@ -34,6 +37,7 @@ class CryptoTable {
       tr.appendChild(tdMarketCap)
       tr.appendChild(tdTopTierVol)
       tr.appendChild(tdChange24)
+      tr.appendChild(tdChange24Percentage)
 
 
       tbody.appendChild(tr)
