@@ -1,26 +1,51 @@
 .container {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 body {
-  background-color: rgb(24, 74, 92);
+  background-color: rgb(215, 246, 246);
 }
 p {
-   color: rgb(225, 213, 213);
+   color: rgb(255, 255, 255);
 }
 h1 {
-  color: steelblue;
+  color: rgb(175,238,238);
 }
 h3 {
-  color: rgb(182, 128, 35);
+  color: rgb(52, 167, 167);
 }
-
+.streak {
+  background-color: rgb(96, 162, 152);
+  height: 30px;
+}
 /* styling for any header */
+header {
+  width: 85%;
+  margin: auto;
+  font-family: 'Playball', cursive;
+}
+.fear {
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.694);
+  margin-right: 10px;
+  padding-top: 25px;
+}
+.fear-history{
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.694);
+  padding-top: 25px;
+}
+.title {
+  background-color: rgba(0, 0, 0, 0.694);
+  margin-right: 10px;
+  margin-top: 20px;
+}
 .index-info {
   font-size: 1.2em;
+  font-family: 'Josefin Slab', serif;
 }
 .fear p {
-  font-size: 1.3em;
-  color: rgb(225, 213, 213);
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.6em;
 }
 .red {
   color: rgb(255, 42, 42);
@@ -32,10 +57,14 @@ h3 {
   color: rgb(47, 250, 47);
 }
 .fear-history p {
-  font-size: 1.3em;
+  font-family: 'Josefin Slab', serif;
+  font-size: 1.6em;
 }
 .btn-success {
-  padding: 2% 30%;
+  padding: 1% 25%;
+  position: relative;
+  bottom: 10px;
+  font-size: 1.5em;
 }
 
 /* Styling for any table */
