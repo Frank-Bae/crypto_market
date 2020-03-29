@@ -1,5 +1,5 @@
 .container {
-  margin-top: 30px;
+  margin-top: 15px;
 }
 body {
   background-color: rgb(24, 74, 92);
@@ -13,8 +13,22 @@ h1 {
 h3 {
   color: rgb(182, 128, 35);
 }
-
+.streak {
+  background-color: rgb(125, 107, 48);
+  height: 30px;
+}
 /* styling for any header */
+header {
+
+  margin: auto;
+  /* background: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/6266383/910/607/m1/fpnw/wm0/v-097-.png?1555556425&s=eca118b32ada5b7008254ee55779f545); */
+}
+.fear {
+  margin-top: 20px;
+}
+.fear-history{
+  margin-top: 20px;
+}
 .index-info {
   font-size: 1.2em;
 }
