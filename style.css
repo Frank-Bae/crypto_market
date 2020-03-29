@@ -2,39 +2,53 @@
   margin-top: 15px;
 }
 body {
-  background-color: rgb(24, 74, 92);
+  background-color: rgb(215, 246, 246);
 }
 p {
    color: rgb(225, 213, 213);
 }
 h1 {
-  color: steelblue;
+  color: rgb(175,238,238);
 }
 h3 {
-  color: rgb(182, 128, 35);
+  color: rgb(191,191,191);
 }
 .streak {
-  background-color: rgb(125, 107, 48);
+  background-color: rgb(96, 162, 152);
   height: 30px;
 }
 /* styling for any header */
 header {
-
+  width: 85%;
   margin: auto;
+  font-family: 'Playball', cursive;
   /* background: url(https://cmkt-image-prd.freetls.fastly.net/0.1.0/ps/6266383/910/607/m1/fpnw/wm0/v-097-.png?1555556425&s=eca118b32ada5b7008254ee55779f545); */
 }
 .fear {
   margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.694);
+  margin-right: 10px;
 }
 .fear-history{
+  margin-top: 20px;
+  background-color: rgba(0, 0, 0, 0.694);
+}
+.title {
+  background-color: rgba(0, 0, 0, 0.694);
+  margin-right: 10px;
   margin-top: 20px;
 }
 .index-info {
   font-size: 1.2em;
+  font-family: 'Josefin Slab', serif;
 }
 .fear p {
+  font-family: 'Josefin Slab', serif;
   font-size: 1.3em;
   color: rgb(225, 213, 213);
+}
+.fear-history p{
+  font-family: 'Josefin Slab', serif;
 }
 .red {
   color: rgb(255, 42, 42);
@@ -49,7 +63,10 @@ header {
   font-size: 1.3em;
 }
 .btn-success {
-  padding: 2% 30%;
+  padding: 1% 25%;
+  position: relative;
+  bottom: 10px;
+  font-size: 1.5em;
 }
 
 /* Styling for any table */
