@@ -12,7 +12,7 @@ A front-end JavaScript application that allows users to view the top 50 crypto c
 
 ### Live Demo
 
-Try the application live at ...
+https://crypto-markets.frankbae.com/
 
 ### Features
 - Users can view the top 50 crypto assets based on top volumes.
