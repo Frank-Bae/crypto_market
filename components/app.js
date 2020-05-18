@@ -8,7 +8,7 @@ class AppTable {
   getCrypto(){
     $.ajax({
       method: "GET",
-      url: "https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=50&tsym=USD&api_key=32bcf25de42cdc2dfce6176731239556beb85906a5566e11ed8eb43e9b827aca",
+      url: "https://cors-anywhere.herokuapp.com/https://min-api.cryptocompare.com/data/top/totaltoptiervolfull?limit=50&tsym=USD&api_key=32bcf25de42cdc2dfce6176731239556beb85906a5566e11ed8eb43e9b827aca",
       success: this.handleGetCryptoSuccess,
       error: this.handleGetCryptoError
     })
