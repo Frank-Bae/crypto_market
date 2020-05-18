@@ -1,6 +1,6 @@
-# Crypto Market Trading View 
+# Crypto Market Trading View
 
-A front-end JavaScript application that allows users to view the top 50 crypto currency by top trading volumes and a fear/greed index to view current and past market sentiments. 
+A front-end JavaScript application that allows users to view the top 50 crypto currency by top trading volumes and a fear/greed index to view current and past market sentiments.
 
 ### Technologies Used
 - JavaScript ES5
@@ -12,18 +12,19 @@ A front-end JavaScript application that allows users to view the top 50 crypto c
 
 ### Live Demo
 
-Try the application live at ... 
+Try the application live at ...
 
 ### Features
 - Users can view the top 50 crypto assets based on top volumes.
 - User can view the pirce, marketcap, changes in 24 hours, changes in 24 hours percentage, and top tier volume.
 - User can grasp the market sentiment by seeing the market sentiment through the fear/greed index.
 - User can press the refresh button to get the latest update on price without having to refresh the whole page
-- User can view the fear/greed index color coded based on market sentiment. 
+- User can view the fear/greed index color coded based on market sentiment.
 
-Found [**here**](https://www.programmableweb.com/apis/directory)
 
 ### Previews
+
+![](./screenshot/Screenshot.png)
 
 ### Getting Started
 1. Clone the repository
