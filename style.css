@@ -86,3 +86,15 @@ img {
     top: 70%;
     left: 50%;
 }
+
+.width{
+  width: 85%;
+  margin: auto;
+}
+td {
+  width: 200px;
+}
+.rank{
+  width: 5%;
+  text-align: center;
+}
