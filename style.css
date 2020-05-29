@@ -79,3 +79,10 @@ img {
   border-radius: 25%;
   margin-right: 10px;
 }
+
+/* Spinner */
+.middle {
+    position: fixed;
+    top: 70%;
+    left: 50%;
+}
