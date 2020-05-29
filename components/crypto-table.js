@@ -3,6 +3,11 @@ class CryptoTable {
     this.tableElement = _tableElement;
   }
   updateTable(data){
+    var spinner = document.body.querySelector('.spinner-border')
+    if (data) {
+      spinner.classList.remove("spinner-border")
+    }
+
     var tbody = this.tableElement.querySelector('tbody')
     for(var i = 0; i < data.Data.length; i++){
       var tr = document.createElement('tr')
