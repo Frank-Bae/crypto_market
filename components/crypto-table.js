@@ -13,6 +13,7 @@ class CryptoTable {
       var tr = document.createElement('tr')
 
       var tdRank = document.createElement('td')
+      tdRank.classList.add('rank')
       tdRank.textContent = i+1
 
       var tdSymbol = document.createElement('td')
@@ -28,6 +29,7 @@ class CryptoTable {
       tdPrice.textContent = data.Data[i].DISPLAY.USD.PRICE
       var tdMarketCap = document.createElement('td')
       tdMarketCap.textContent = data.Data[i].DISPLAY.USD.MKTCAP
+      tdMarketCap.classList.add('expand')
       var tdTopTierVol = document.createElement('td')
       tdTopTierVol.textContent = data.Data[i].DISPLAY.USD.TOTALTOPTIERVOLUME24HTO
       var tdChange24 = document.createElement('td')

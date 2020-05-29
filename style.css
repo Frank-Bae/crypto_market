@@ -1,6 +1,4 @@
-.container {
-  margin-top: 15px;
-}
+
 body {
   background-color: rgb(215, 246, 246);
 }
@@ -85,4 +83,16 @@ img {
     position: fixed;
     top: 70%;
     left: 50%;
+}
+
+.width{
+  width: 85%;
+  margin: auto;
+}
+td {
+  width: 200px;
+}
+.rank{
+  width: 5%;
+  text-align: center;
 }
