@@ -29,6 +29,6 @@ https://crypto-markets.frankbae.com/
 ### Getting Started
 1. Clone the repository
 
-git clone https://github.com/Frank-Bae/crypto_market.git
+        git clone https://github.com/Frank-Bae/crypto_market.git
 
 2. Open the file through a code editor and open default browser from index.html file.
