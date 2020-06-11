@@ -96,3 +96,15 @@ td {
   width: 5%;
   text-align: center;
 }
+
+/* error message */
+.networkModal {
+  color: red;
+  text-align: center;
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+  margin-top: 20px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid black;
+}

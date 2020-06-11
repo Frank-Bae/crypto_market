@@ -21,7 +21,7 @@ class AppTable {
     var network = document.body.querySelector('#network')
     var testing = document.createElement('h1')
     testing.classList.add('networkModal')
-    testing.textContent = "The network is not currently connected"
+    testing.textContent = "Crypto Market could not be refreshed. Please try again"
     network.appendChild(testing)
 
     var spinner = document.body.querySelector('.spinner-border')
