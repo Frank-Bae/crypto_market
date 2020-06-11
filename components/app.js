@@ -18,6 +18,14 @@ class AppTable {
   }
   handleGetCryptoError(error){
     console.error(error)
+    var network = document.body.querySelector('#network')
+    var testing = document.createElement('h3')
+    testing.classList.add('networkModal')
+    testing.textContent = "Crypto Market could not retrieve data at this time. Please try again."
+    network.appendChild(testing)
+
+    var spinner = document.body.querySelector('.spinner-border')
+    spinner.classList.remove("spinner-border")
   }
 }
 
