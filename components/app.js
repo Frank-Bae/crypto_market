@@ -18,6 +18,10 @@ class AppTable {
   }
   handleGetCryptoError(error){
     console.error(error)
+    var tbody = document.body.querySelector('tbody')
+    var testing = document.createElement('h1')
+    testing.textContent = "hello there"
+    tbody.appendChild(testing)
   }
 }
 
