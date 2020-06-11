@@ -18,10 +18,14 @@ class AppTable {
   }
   handleGetCryptoError(error){
     console.error(error)
-    var tbody = document.body.querySelector('tbody')
+    var network = document.body.querySelector('#network')
     var testing = document.createElement('h1')
-    testing.textContent = "hello there"
-    tbody.appendChild(testing)
+    testing.classList.add('networkModal')
+    testing.textContent = "The network is not currently connected"
+    network.appendChild(testing)
+
+    var spinner = document.body.querySelector('.spinner-border')
+    spinner.classList.remove("spinner-border")
   }
 }
 
