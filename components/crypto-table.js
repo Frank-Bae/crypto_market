@@ -126,8 +126,3 @@ class FearIndexHistory {
     pLastMonth.appendChild(spanLastMonth)
   }
 }
-
-// var timeStampYesterday = data2.data[1].timestamp
-// var timestamp = Number(new Date(timeStampYesterday * 1000))
-// var date = new Date(timestamp)
-// console.log(date)
