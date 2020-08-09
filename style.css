@@ -109,9 +109,17 @@ td {
   border: 2px solid black;
 }
 
-
 @media (max-width: 900px) {
   .symbol span {
     display: block;
+  }
+}
+
+
+@media (max-width: 500px) {
+  .networkModal {
+    width: 300px;
+    height: 100px;
+    font-size: 20px;
   }
 }
